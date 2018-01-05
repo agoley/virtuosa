@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WorkingModule } from './modules/working/working.module';
@@ -14,7 +15,8 @@ import { GeneratorModule } from './modules/generator/generator.module';
   imports: [
     BrowserModule,
     WorkingModule,
-    GeneratorModule
+    GeneratorModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

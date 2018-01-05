@@ -2,6 +2,6 @@
   workbench works!
 </p>
 <div>Temp Text : ({{temp}})</div>
-<div #textbox type="text" [innerHtml]="test"></div>
+<div #textbox type="text" [innerHtml]="temp | safeHtml"></div>
 
-<input [(value)]="temp"/>
+<textarea [(ngModel)]="temp" style="min-width: 400px; min-height: 200px;"></textarea>
