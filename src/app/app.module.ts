@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WorkingModule } from './modules/working/working.module';
+import { CMSModule } from './modules/cms/cms.module';
 import { environment } from '../environments/environment';
 import { GeneratorModule } from './modules/generator/generator.module';
 
@@ -15,6 +16,7 @@ import { GeneratorModule } from './modules/generator/generator.module';
   imports: [
     BrowserModule,
     WorkingModule,
+    CMSModule,
     GeneratorModule,
     FormsModule
   ],
