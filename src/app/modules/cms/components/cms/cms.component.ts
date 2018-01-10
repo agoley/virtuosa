@@ -1,13 +1,6 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser'
-
-@Pipe({ name: 'safeHtml'})
-export class SafeHtmlPipe implements PipeTransform  {
-  constructor(private sanitized: DomSanitizer) {}
-  transform(value) {
-    return this.sanitized.bypassSecurityTrustHtml(value);
-  }
-}
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'cms-core',
@@ -16,10 +9,18 @@ export class SafeHtmlPipe implements PipeTransform  {
 })
 export class CMSComponent implements OnInit {
   public test = 'TEST';
-  public temp:String = '<style> .red { color: red;} </style> <h1>Test Text</h1> <input class="t2" value="try hard"/> <p class="red">Color test</p>';
+  public pageHtml:String = '<style> .red { color: red;} </style> <h1 class="item">Test Text2</h1> <input class="item t2" value="try hard"/> <p class="item red">Color test</p>';
 
   constructor() { }
 
-  ngOnInit() {  }
-
+  ngOnInit() {  
+    $('.item').mouseover(function() {
+        console.log("on item");
+        $(this).addClass('borderClass');
+    });
+    $('.item').mouseleave(function() {
+        console.log("off item");
+        $(this).removeClass('borderClass');
+    });
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector:'cms-menu',
@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.less']
 })
 export class MenuComponent {
+    @Output() toggleEvent = new EventEmitter<string>();
     constructor(){}
-   
+
+    /* Functions */
+    toggleSideNav() {
+      this.toggleEvent.next();
+    }    
 }

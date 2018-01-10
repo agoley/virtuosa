@@ -1,7 +1,18 @@
-<div class="cms-container">
-    <!-- Menu -->
-    <cms-menu></cms-menu>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" class="sideNav-container" align="start" fixedInViewport="true" mode="push" disableClose>
+        <div class="side-body">
+            <h1>TEST</h1>
+        </div>        
+    </mat-sidenav>
 
-    <!-- Body -->
-    <p>Main Body</p>
-</div>
+    <mat-sidenav-content>
+        <section class="cms-container">
+            <!-- Menu -->
+            <cms-menu (toggleEvent)="sidenav.toggle()"></cms-menu>
+
+            <!-- Body -->
+            <h1>TEST Work Bench</h1>
+            <page-body [pageStr]="pageHtml"></page-body>            
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>

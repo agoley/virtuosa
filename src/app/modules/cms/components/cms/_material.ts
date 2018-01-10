@@ -11,7 +11,7 @@ import {
     MatDialogModule,
     MatExpansionModule,
     MatGridListModule,
-    MatIconModule,
+    MatIconModule,    
     MatInputModule,
     MatListModule,
     MatMenuModule,
@@ -34,7 +34,7 @@ import {
     MatStepperModule,
   } from '@angular/material';
   import {CdkTableModule} from '@angular/cdk/table';
-  import { HttpModule } from '@angular/http';
+  import { HttpModule } from '@angular/http';  
   
   @NgModule({
     exports: [
@@ -50,7 +50,7 @@ import {
       MatDialogModule,
       MatExpansionModule,
       MatGridListModule,
-      MatIconModule,
+      MatIconModule,      
       MatInputModule,
       MatListModule,
       MatMenuModule,

@@ -1,0 +1,5 @@
+<p>page body test</p>
+<div>Temp Text : ({{pageStr}})</div>
+<div class="demo-area" type="text" [innerHtml]="pageStr | safeHtml"></div>
+
+<textarea [(ngModel)]="pageStr" style="min-width: 400px; min-height: 200px;"></textarea>

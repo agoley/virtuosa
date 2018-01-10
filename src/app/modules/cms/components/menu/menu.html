@@ -1,6 +1,8 @@
 <div class="sidemenu">
     <div class="sidenav-container">
-        <mat-icon>home</mat-icon>
-        <mat-icon>dashboard</mat-icon>
+        <div class="tool-container">
+            <span class="cms-tool" (click)="toggleSideNav()" matTooltip="Menu" matTooltipPosition="right"><mat-icon>&#xE871;</mat-icon></span>
+            <span class="cms-tool" (click)="toggleSideNav()" matTooltip="Data" matTooltipPosition="right"><mat-icon>&#xE1AF;</mat-icon></span>
+        </div>               
     </div>
 </div>
