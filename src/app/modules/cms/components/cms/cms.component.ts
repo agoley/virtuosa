@@ -13,14 +13,23 @@ export class CMSComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {  
-    $('.item').mouseover(function() {
+  ngOnInit() { 
+    
+  }
+
+  public hoverTest(){
+    $('.item').mouseenter(function() {
         console.log("on item");
-        $(this).addClass('borderClass');
+        if(!$(this).hasClass('borderClass')) {
+          $(this).addClass('borderClass');
+        }
     });
     $('.item').mouseleave(function() {
         console.log("off item");
-        $(this).removeClass('borderClass');
+        if($(this).hasClass('borderClass')) {
+          //$(this).removeClass('borderClass');
+        }
     });
   }
+  
 }
