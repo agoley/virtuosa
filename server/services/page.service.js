@@ -1,30 +1,30 @@
-var pageService = {}; // service object
+var service = {}; // service object
 
-pageService.get = (req, res) => {
+service.get = (req, res) => {
   var name = req.params.name;
 
   // Look up the page by name and return it.
-  res.send();
+  res.send("GET page works!");
 }
 
-pageService.update = (req, res) => {
+service.update = (req, res) => {
   var id = req.params.id;
 
   // Look up the page by id then update and return it.
-  res.send();
+  res.send("UPDATE page works!");
 }
 
-pageService.delete = (req, res) => {
+service.delete = (req, res) => {
   var id = req.params.id;
 
   // Look up the page by id then delete it.
-  res.send();
+  res.send("DELETE page works!");
 }
 
-pageService.create = (req, res) => {
+service.create = (req, res) => {
 
   // Create a new page and return it.
-  res.send();
+  res.send("CREATE page works!");
 }
 
 module.exports = service;
