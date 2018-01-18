@@ -7,7 +7,7 @@ var templateService = require('../services/template.service.js');
 // ROUTES
 router.put('', createTemplate);
 router.route('/:id')
-    .get('/:id', getTemplate)
+    .get(getTemplate)
     .delete(expressJWT({ secret: secret }), deleteTemplate)
     .post(expressJWT({ secret: secret }), updateTemplate)
 
